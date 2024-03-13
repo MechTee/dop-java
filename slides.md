@@ -25,7 +25,7 @@ hideInToc: true
 
 
 <div class="abs-br m-6 flex gap-2">
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
+  <a href="https://github.com/mechtee/dop-java" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -36,11 +36,11 @@ Willkommen zu meinem Talk.
 -->
 
 ---
-layout: full
+layout: image
+image: /images/jfs_itsme.jpg
 title: Inspiration
 ---
 
-<img src="/jfs_itsme.jpg"/>
 <!--
 * Weiterbildung und Horizonterweiterung durch Konferenzen & Talks
 * Nicht nur JAVA (auch bspw. RUST)
@@ -49,18 +49,17 @@ title: Inspiration
 -->
 
 ---
-layout: full
+layout: image
+image: /images/inspiration-1920-1080.png
 hideInToc: true
 ---
-<img src="/inspiration-1920-1080.png"/>
 
 
 ---
 transition: slide-up
-layout: full
+layout: image
+image: /images/that_damned_slide-1920-1080.png
 ---
-
-<img src="/that_damned_slide-1920-1080.png" class="h-full"/>
 
 
 ---
@@ -76,7 +75,8 @@ hideInToc: true
 ---
 transition: slide-up
 level: 1
-layout: two-cols
+layout: image-right
+image: /images/oop_dall-e.png
 ---
 # OOP
 
@@ -94,19 +94,13 @@ layout: two-cols
 
 * leads to modular reasoning
 
-::right::
-
-<img src="/oop_dall-e.png" class="w-full"/>
 
 ---
 transition: slide-up
 level: 1
-layout: two-cols
+layout: image-left
+image: https://blog.klipse.tech/uml/chapter00/do-principles-mind-map.png
 ---
-
-<img src="https://blog.klipse.tech/uml/chapter00/do-principles-mind-map.png" class="w-full"/>
-
-::right::
 
 # DOP
 
@@ -177,7 +171,7 @@ layout: default
 * Pattern Matching
 
 
-![java_timeline](/java_timeline.png)
+![java_timeline](/images/java_timeline.png)
 
 ---
 level: 2
@@ -236,7 +230,7 @@ level: 2
 * nominal tuples
 
 <div class="mt-10 flex justify-center align-items-center">
-  <img class="w-80 h-80" src="/record.png"/>
+  <img class="w-80 h-80" src="/images/record.png"/>
 </div>
 
 ---
@@ -394,7 +388,6 @@ Every permitted subclass must define a modifier: final, sealed, or non-sealed.
 
 ---
 layout: default
-
 ---
 
 <Titles>
@@ -698,7 +691,8 @@ switch (box) {
 </div>
 
 ---
-layout: two-cols
+layout: image-right
+image: /images/nurse_joy.png
 level: 1
 transition: slide-up
 ---
@@ -707,9 +701,6 @@ transition: slide-up
 * New Pokemon Generations introduced new Regions and PokeDex
 * Different regional Pokemons require different Healing (assumption)
 
-::right::
-
-<img src="/nurse_joy.png" class="w-full" />
 
 ---
 layout: default
@@ -731,7 +722,7 @@ layout: default
 <div class="flex w-1/2">
 </div>
 <div class="flex w-1/2">
-<img src="/Kotlin_Icon.png" class="h-32"/>
+<img src="/images/Kotlin_Icon.png" class="h-32"/>
 
 </div>
 </div>
@@ -777,7 +768,7 @@ transition: slide-up
 <div class="flex w-1/2">
 </div>
 <div class="flex w-1/2">
-<img src="/rustacean-flat-happy.png" class="h-32"/>
+<img src="/images/rustacean-flat-happy.png" class="h-32"/>
 
 </div>
 </div>
@@ -868,11 +859,10 @@ Brian Goetz
 ---
 transition: slide-up
 hideInToc: true
-layout: full
+layout: image
+image: /images/questions.jpg
 title: Q & A
 ---
-
-<img src="/questions.jpg" class="h-full" />
 
 ---
 hideInToc: true
