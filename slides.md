@@ -36,11 +36,11 @@ Willkommen zu meinem Talk.
 -->
 
 ---
-image: /jfs_itsme.jpg
-layout: image
+layout: full
 title: Inspiration
 ---
 
+<img src="/jfs_itsme.jpg"/>
 <!--
 * Weiterbildung und Horizonterweiterung durch Konferenzen & Talks
 * Nicht nur JAVA (auch bspw. RUST)
@@ -49,22 +49,19 @@ title: Inspiration
 -->
 
 ---
-layout: image
-image: /inspiration-1920-1080.png
+layout: full
 hideInToc: true
 ---
-
-<!--[original slide]()-->
+<image src="/inspiration-1920-1080.png"/>
 
 
 ---
 transition: slide-up
-layout: image
-image: /that_damned_slide-1920-1080.png
+layout: full
 ---
 
-<!--[that damned slide](/that_damned_slide.png)-->
-<!-- TODO: resize this image-->
+<img src="/that_damned_slide-1920-1080.png" class="h-full"/>
+
 
 ---
 transition: slide-up
@@ -79,8 +76,7 @@ hideInToc: true
 ---
 transition: slide-up
 level: 1
-layout: image-right
-image: /oop_dall-e.png
+layout: two-cols
 ---
 # OOP
 
@@ -98,12 +94,19 @@ image: /oop_dall-e.png
 
 * leads to modular reasoning
 
+::right::
+
+<img src="/oop_dall-e.png" class="w-full"/>
+
 ---
 transition: slide-up
 level: 1
-layout: image-left
-image: https://blog.klipse.tech/uml/chapter00/do-principles-mind-map.png
+layout: two-cols
 ---
+
+<img src="https://blog.klipse.tech/uml/chapter00/do-principles-mind-map.png" class="w-full"/>
+
+::right::
 
 # DOP
 
@@ -695,8 +698,7 @@ switch (box) {
 </div>
 
 ---
-layout: image-right
-image: /nurse_joy.png
+layout: two-cols
 level: 1
 transition: slide-up
 ---
@@ -705,6 +707,9 @@ transition: slide-up
 * New Pokemon Generations introduced new Regions and PokeDex
 * Different regional Pokemons require different Healing (assumption)
 
+::right::
+
+<img src="/nurse_joy.png" class="w-full" />
 
 ---
 layout: default
@@ -726,7 +731,7 @@ layout: default
 <div class="flex w-1/2">
 </div>
 <div class="flex w-1/2">
-<img src="/Kotlin_Icon.png" class="h-32">
+<img src="/Kotlin_Icon.png" class="h-32"/>
 
 </div>
 </div>
@@ -772,7 +777,7 @@ transition: slide-up
 <div class="flex w-1/2">
 </div>
 <div class="flex w-1/2">
-<img src="/rustacean-flat-happy.png" class="h-32">
+<img src="/rustacean-flat-happy.png" class="h-32"/>
 
 </div>
 </div>
@@ -863,11 +868,12 @@ Brian Goetz
 ---
 transition: slide-up
 hideInToc: true
-layout: image
+layout: full
 title: Q & A
 image: /questions.jpg
 ---
 
+<img src="questions.jpg" class="h-full" />
 
 ---
 hideInToc: true
