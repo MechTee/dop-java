@@ -52,7 +52,7 @@ title: Inspiration
 layout: full
 hideInToc: true
 ---
-<image src="/inspiration-1920-1080.png"/>
+<img src="/inspiration-1920-1080.png"/>
 
 
 ---
