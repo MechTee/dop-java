@@ -870,10 +870,9 @@ transition: slide-up
 hideInToc: true
 layout: full
 title: Q & A
-image: /questions.jpg
 ---
 
-<img src="questions.jpg" class="h-full" />
+<img src="/questions.jpg" class="h-full" />
 
 ---
 hideInToc: true
