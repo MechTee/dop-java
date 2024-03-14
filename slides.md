@@ -868,14 +868,18 @@ title: Q & A
 
 ---
 hideInToc: true
-layout: end
 ---
 
 # THANK YOU & contact me here:
 
+<div class="text-3xl mb-8" >
+
 - E-Mail: mechti.oezdogan@exxeta.com
 - Github: https://github.com/MechTee/
 - LinkedIn: https://www.linkedin.com/in/mechtee/
+
+</div>
+
 
 ## Slides here:
 <!-- TODO: update this!-->
