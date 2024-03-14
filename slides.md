@@ -41,14 +41,14 @@ image: /images/jfs_itsme.jpg
 title: Inspiration
 ---
 
-<RenderWhen context="presenter">
+<!--
 
 * Weiterbildung und Horizonterweiterung durch Konferenzen & Talks
 * Nicht nur JAVA (auch bspw. RUST)
 * JFS 2023
 * Ron Veen's Modern Java - This is not your father's Java anymore
 
-</RenderWhen>
+-->
 
 ---
 layout: image
@@ -181,23 +181,22 @@ level: 2
 
 <Titles>
   <div class="flex w-full flex-row justify-between items-center">
-    <div class="bg-orange-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">12</div>
+    <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">12</h4></div>
     <h1 class="flex align-center justify-center items-center">Switch expressions JEP 361</h1>
-    <div class="bg-green-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">14</div>
+    <div class="bg-green-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">14</h4></div>
   </div>
 </Titles>
 
 
 ````md magic-move
 ```java
-var mOTD = ""; // meme of the day
+var memeOfTheDay = "";
 switch (day) {
   case WEDNESDAY:
-    mOTD =
-      "ITS WEDNESDAY MY DUDES";
+    mOTD = "ITS WEDNESDAY MY DUDES";
     break;
   case FRIDAY:
-    mOTD = "FRIDAY, FRIDAY!";
+    mOTD = "IT'S FRIDAY, FRIDAY!";
     break;
   default:
     mOTD = "None found."
@@ -206,12 +205,9 @@ switch (day) {
 
 ```java
 var mOTD = switch (day) {
-  case WEDNESDAY ->
-    "ITS WEDNESDAY MY DUDES";
-  case FRIDAY ->
-    "FRIDAY, FRIDAY!";
-    //ref: rebecca black
-  default -> "None found."
+  case WEDNESDAY  -> "ITS WEDNESDAY MY DUDES";
+  case FRIDAY     -> "IT'S FRIDAY, FRIDAY!";
+  default         -> "None found."
 }
 ```
 ````
@@ -222,9 +218,9 @@ level: 2
 ---
 <Titles>
   <div class="flex w-full flex-row justify-between items-center">
-    <div class="bg-orange-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">14</div>
+    <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">14</h4></div>
     <h1 class="flex align-center justify-center items-center">Records JEP 395</h1>
-    <div class="bg-green-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">16</div>
+    <div class="bg-green-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">16</h4></div>
   </div>
 </Titles>
 
@@ -281,9 +277,9 @@ level: 2
 
 <Titles>
   <div class="flex w-full flex-row justify-between items-center">
-    <div class="bg-orange-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">14</div>
+    <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">14</h4></div>
     <h1 class="flex align-center justify-center items-center">Sealed Classes JEP 409</h1>
-    <div class="bg-green-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">16</div>
+    <div class="bg-green-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">16</h4></div>
   </div>
 </Titles>
 
@@ -394,9 +390,9 @@ layout: default
 
 <Titles>
   <div class="flex w-full flex-row justify-between items-center">
-    <div class="bg-orange-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">14</div>
+    <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">14</h4></div>
     <h1 class="flex align-center justify-center items-center">Pattern matching for instanceof JEP394</h1>
-    <div class="bg-green-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">16</div>
+    <div class="bg-green-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">16</h4></div>
   </div>
 </Titles>
 
@@ -464,9 +460,9 @@ level: 2
 
 <Titles>
   <div class="flex w-full flex-row justify-between items-center">
-    <div class="bg-orange-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">19</div>
+    <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">19</h4></div>
     <h1 class="flex align-center justify-center items-center">Record Pattern Matching JEP 440</h1>
-    <div class="bg-green-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">21</div>
+    <div class="bg-green-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">21</h4></div>
   </div>
 </Titles>
 
@@ -510,9 +506,9 @@ clicks: 5
 
 <Titles>
   <div class="flex w-full flex-row justify-between items-center">
-    <div class="bg-orange-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">17</div>
+    <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">17</h4></div>
     <h1 class="flex align-center justify-center items-center">Pattern Matching for switch JEP 441</h1>
-    <div class="bg-green-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">21</div>
+    <div class="bg-green-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">21</h4></div>
   </div>
 </Titles>
 
@@ -531,12 +527,9 @@ if (status instanceof MajorStatus mStatus) {
 
 ```java
 switch (status) {
-  case MajorStatus mStatus ->
-    applyMajorStatus(mStatus);
-  case DamagingStatus dStatus ->
-    applyDamagingStatus(dStatus);
-  case PreventionStatus pStatus ->
-    applyPreventionStatus(pStatus);
+  case MajorStatus mStatus      -> applyMajorStatus(mStatus);
+  case DamagingStatus dStatus   -> applyDamagingStatus(dStatus);
+  case PreventionStatus pStatus -> applyPreventionStatus(pStatus);
   ...
 }
 ```
@@ -552,12 +545,13 @@ switch (status) {
 ```java
 switch (status) {
 // Case refinement no guards:
-  case VolatileStatus vStatus ->
+  case VolatileStatus vStatus -> {
     if (vStatus.turns() > 0) {
       applyVolatileStatus(vStatus);
     } else {
       removeStatus(vStatus);
     }
+  }
 }
 ```
 
@@ -565,7 +559,7 @@ switch (status) {
 switch (status) {
 // Case refinement with guards:
   case VolatileStatus vStatus
-       when vStatus.turns() == 0 ->
+      when vStatus.turns() == 0 ->
     removeStatus(vStatus);
   case VolatileStatus vStatus ->
     applyVolatileStatus(vStatus);
@@ -619,17 +613,16 @@ transition: slide-up
 
 <Titles>
   <div class="flex w-full flex-row justify-between items-center">
-    <div class="bg-orange-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">21</div>
+    <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">21</h4></div>
     <h1 class="flex align-center justify-center items-center">Unnamed Variables & Patterns JEP456</h1>
-    <div class="bg-green-600 shadow h-10 w-10 text-center justify-center items-center flex mb-4">22</div>
+    <div class="bg-green-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">22</h4></div>
   </div>
 </Titles>
 
 ````md magic-move
 
 ```java
-static int countStatuses(
-    Iterable<Status> statuses) {
+static int countStatuses(Iterable<Status> statuses) {
   int total = 0;
   for (Status status: statuses)
     total++;
@@ -638,8 +631,7 @@ static int countStatuses(
 ```
 
 ```java
-static int countStatuses(
-    Iterable<Status> statuses) {
+static int countStatuses(Iterable<Status> statuses) {
   int total = 0;
   for (Status _ : statuses)
     total++
@@ -655,36 +647,28 @@ static int countStatuses(
 
 ```java
 switch (box) {
-  case Box(RedBall red) ->
-    processBox(box);
-  case Box(BlueBall blue) ->
-    processBox(box);
-  case Box(GreenBall green) ->
-    stopProcessing();
-  case Box(var nullBall) ->
-    pickAnotherBox();
+  case Box(RedBall red)     -> processBox(box);
+  case Box(BlueBall blue)   -> processBox(box);
+  case Box(GreenBall green) -> stopProcessing();
+  case Box(var nullBall)    -> pickAnotherBox();
 }
 ```
 
 ```java
 // refinement with unnamed variables
 switch (box) {
-  case Box(RedBall _),
-       Box(BlueBall _) ->
-    processBox(box);
-  case Box(GreenBall _) ->
-    stopProcessing();
-  case Box(var _) ->
-    pickAnotherBox();
+  case Box(RedBall _), Box(BlueBall _) -> processBox(box);
+  case Box(GreenBall _)                -> stopProcessing();
+  case Box(var _)                      -> pickAnotherBox();
 }
 ```
 
 ```java
 // further refinement with unnamed pattern:
 switch (box) {
-    case Box(RedBall _), Box(BlueBall _) -> processBox(box);
-    case Box(GreenBall _)                -> stopProcessing();
-    case Box(_)                          -> pickAnotherBox();
+  case Box(RedBall _), Box(BlueBall _) -> processBox(box);
+  case Box(GreenBall _)                -> stopProcessing();
+  case Box(_)                          -> pickAnotherBox();
 }
 ```
 
@@ -811,6 +795,7 @@ pub enum Result<T, E> {
 
 ```rust
 let option = Some("Value");
+
 match option { //extensive pattern matching
   Some(val) => println!("We have a {}", val),
   None => println!("We have no value")
@@ -826,7 +811,8 @@ let result = Err("OW it did not worky")
 
 if let Err(error_msg) = result {
   println!("Error occured: {}", error_msg);
-} // else or continue flow
+}
+// else or continue flow
 ```
 
 </div>
