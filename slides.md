@@ -41,12 +41,14 @@ image: /images/jfs_itsme.jpg
 title: Inspiration
 ---
 
-<!--
+<RenderWhen context="presenter">
+
 * Weiterbildung und Horizonterweiterung durch Konferenzen & Talks
 * Nicht nur JAVA (auch bspw. RUST)
 * JFS 2023
 * Ron Veen's Modern Java - This is not your father's Java anymore
--->
+
+</RenderWhen>
 
 ---
 layout: image
