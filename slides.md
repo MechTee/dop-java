@@ -537,8 +537,8 @@ switch (status) {
 ````
 <!-- TODO: maybe refactor this click behaviour -->
 <div v-click></div>
-<div class="flex w-full gap-4 mt-10">
-<div v-click="[2,6]" class="w-1/2 flex flex-auto">
+<div class="flex w-full gap-8 mt-8">
+<div v-click="[2,6]" class="w-1/2">
 
 ````md magic-move
 
@@ -569,7 +569,7 @@ switch (status) {
 ````
 </div>
 <div v-click></div>
-<div v-click="[4,6]" class="w-1/2 flex flex-auto">
+<div v-click="[4,6]" class="w-1/2">
 
 ````md magic-move
 
@@ -641,7 +641,7 @@ static int countStatuses(Iterable<Status> statuses) {
 
 ````
 <div v-click></div>
-<div v-click="[2,6]" class="mt-10">
+<div v-click="[2,6]" class="mt-8">
 
 ````md magic-move
 
@@ -676,6 +676,113 @@ switch (box) {
 
 </div>
 
+---
+level: 2
+---
+
+<Titles>
+  <div class="flex w-full flex-row justify-between items-center">
+    <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4 -mt-10"><h4 class="text-white">23</h4></div>
+    <h1 class="flex align-center grow-0	 justify-center items-center text-center">Primitive Types in Patterns, instanceof, <br/> and switch JEP455</h1>
+    <div class="bg-green-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4 -mt-10"><h4 class="text-white">??</h4></div>
+  </div>
+</Titles>
+
+````md magic-move
+
+```java
+switch (x.getStatus()) {
+    case 0 -> "okay";
+    case 1 -> "warning";
+    case 2 -> "error";
+    default -> "unknown status: " + x.getStatus();
+}
+
+```
+
+
+```java
+
+switch (x.getStatus()) {
+    case 0 -> "okay";
+    case 1 -> "warning";
+    case 2 -> "error";
+    case int i -> "unknown status: " + i;
+}
+
+```
+
+```java
+
+switch (x.getYearlyFlights()) {
+    case 0 -> ...;
+    case 1 -> ...;
+    case 2 -> issueDiscount();
+    case int i when i >= 100 -> issueGoldCard();
+    case i -> ...;
+}
+
+```
+
+````
+
+<div v-click></div>
+
+<div v-click="[3,6]" class="w-full flex gap-8 mt-8">
+<div class="w-1/2">
+
+````md magic-move
+
+```java
+int getPopulation() {...}
+// silent potential loss of information
+float pop = getPopulation();
+...
+
+if (i >= -128 && i <= 127) {
+  byte b = (byte) i;
+  ...
+}
+
+```
+
+```java
+if (getPopulation() instanceof float pop) {
+  ...
+}
+
+if (i instanceof byte b) {
+  ...
+}
+
+```
+
+````
+
+</div>
+
+<div v-click class="w-1/2">
+
+```java
+Byte b = ...
+switch (b) { 
+  // exhaustive switch
+  case int p -> 0;
+}
+
+```
+
+</div>
+
+</div>
+
+
+<!--
+Pattern matching for switch does not support primitive type patterns
+Record patterns have limited support for primitive types
+Pattern matching for instanceof does not support primitive types
+Primitive types in instanceof and switch
+-->
 ---
 layout: image-right
 image: /images/nurse_joy.png
@@ -741,7 +848,7 @@ transition: slide-up
 
 # How do others do it? - Rust
 
-<div class="flex flex-row gap-4">
+<div class="flex flex-row gap-2">
 <div class="flex w-1/2">
 
 * data oriented sees shared mutable data as a very bad thing
@@ -760,7 +867,7 @@ transition: slide-up
 </div>
 </div>
 
-<div class="flex flex-1 flex-row w-full gap-4 mt-8">
+<div class="flex flex-1 flex-row w-full gap-2 mt-8">
 <div v-click class="w-1/2">
 
 ```rust
@@ -789,7 +896,7 @@ pub enum Result<T, E> {
 
 </div>
 
-<div class="flex flex-row flex-1 w-full gap-4 mt-4">
+<div class="flex flex-row flex-1 w-full gap-2 mt-4">
 
 <div class="w-1/2" v-click>
 
