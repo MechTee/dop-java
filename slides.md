@@ -396,6 +396,8 @@ layout: default
   </div>
 </Titles>
 
+<div class="-mt-8">
+
 ````md magic-move
 
 ```java
@@ -415,10 +417,11 @@ if (obj instanceof Status s) {
 
 ````
 
+</div>
 
 <div class="w-full flex gap-8 mt-8">
   <div v-click class="w-1/2">
-  
+
   ```java
   if (a instanceof Status s) {
     ...// s is in scope
@@ -430,7 +433,7 @@ if (obj instanceof Status s) {
   ```
 
   </div>
-  <div v-click class="w-1/2 flex flex-col">
+  <div v-click class="w-1/2">
 
   ```java
   if (obj instanceof Confusion c && c.turns() > 1) {
@@ -535,9 +538,8 @@ switch (status) {
 ```
 
 ````
-<!-- TODO: maybe refactor this click behaviour -->
 <div v-click></div>
-<div class="flex w-full gap-8 mt-8">
+<div class="flex w-full gap-4 mt-8">
 <div v-click="[2,6]" class="w-1/2">
 
 ````md magic-move
@@ -678,6 +680,7 @@ switch (box) {
 
 ---
 level: 2
+clicks: 5
 ---
 
 <Titles>
@@ -702,7 +705,6 @@ switch (x.getStatus()) {
 
 
 ```java
-
 switch (x.getStatus()) {
     case 0 -> "okay";
     case 1 -> "warning";
@@ -713,7 +715,6 @@ switch (x.getStatus()) {
 ```
 
 ```java
-
 switch (x.getYearlyFlights()) {
     case 0 -> ...;
     case 1 -> ...;
@@ -802,7 +803,7 @@ layout: default
 # How do others do it? - Kotlin
 
 <div class="flex flex-row w-full">
-<div class="flex w-1/2 pr-10">
+<div class="flex w-2/3 pr-10">
 
 * record-"like" data classes
 * sealed classes and interfaces (Kotlin 1.5)
@@ -810,14 +811,10 @@ layout: default
 
 </div>
 
-<div class="flex w-1/2">
+<div class="flex w-1/3">
 
-<div class="flex w-1/2">
-</div>
-<div class="flex w-1/2">
 <img src="/images/Kotlin_Icon.png" class="h-32"/>
 
-</div>
 </div>
 </div>
 <div class="mt-8" v-click>
@@ -849,25 +846,21 @@ transition: slide-up
 # How do others do it? - Rust
 
 <div class="flex flex-row gap-2">
-<div class="flex w-1/2">
+<div class="flex w-2/3">
 
 * data oriented sees shared mutable data as a very bad thing
 * rust: manage access to that shared data and who can mutate
 
 </div>
 
-<div class="flex w-1/2">
+<div class="flex w-1/3">
 
-<div class="flex w-1/2">
-</div>
-<div class="flex w-1/2">
 <img src="/images/rustacean-flat-happy.png" class="h-32"/>
 
 </div>
 </div>
-</div>
 
-<div class="flex flex-1 flex-row w-full gap-2 mt-8">
+<div class="flex flex-1 flex-row w-full gap-2 mt-6">
 <div v-click class="w-1/2">
 
 ```rust
@@ -933,9 +926,9 @@ layout: default
 <!-- todo: add some image! -->
 
 # Conclusion
-* DOP is a nice addition to OOP
 * useful especially for small units like microservices
 * mainly handling outside data
+* DOP can be a nice addition to OOP
 * Try it some time :)
 
 ---
@@ -976,6 +969,6 @@ hideInToc: true
 
 ## Slides here:
 <!-- TODO: update this!-->
-<div class="flex justify-center mt-8">
-  <img class="h-40" src="/qr-code-drive.png"/>
+<div class="flex justify-center">
+  <img class="h-48" src="/images/qr-code_slides_400_400.png"/>
 </div>
