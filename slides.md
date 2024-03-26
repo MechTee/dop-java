@@ -4,7 +4,7 @@ colorSchema: light
 #background: https://source.unsplash.com/collection/94734566/1920x1080
 class: text-center
 highlighter: shiki
-lineNumbers: true
+lineNumbers: false
 info: |
   ## Java DOP
   Data-oriented Programming in Java
@@ -16,8 +16,6 @@ download: true
 transition: slide-left
 title: Immer nur objektorientiert - schon mal datenorientiert ausprobiert?
 mdc: true
-monaco: true
-monacoTypesSource: cdn
 hideInToc: true
 ---
 
@@ -56,6 +54,10 @@ image: /images/inspiration-1920-1080.png
 hideInToc: true
 ---
 
+<!--
+* Slide die mich abgeholt hat
+* erinnert stark an eine spätere folie
+-->
 
 ---
 transition: slide-up
@@ -79,7 +81,9 @@ transition: slide-up
 level: 1
 layout: image-right
 image: /images/oop_dall-e.png
+title: OOP v DOP
 ---
+
 # OOP
 
 * complex entites and systems
@@ -96,12 +100,20 @@ image: /images/oop_dall-e.png
 
 * leads to modular reasoning
 
+<!--
+- Programmierparadigma mit Fokus auf Modellierung von Objekten und deren Interaktionen.
+- Ein Objekt ist eine Instanz einer Klasse und enthält Daten (Attribute) und Methoden (Funktionen), die auf diese Daten zugreifen.
+OOP ermöglicht die Abstraktion von komplexen Systemen, indem es diese in kleinere, modulare Einheiten (Objekte) aufteilt.
+- Vererbung ermöglicht es, Eigenschaften und Methoden von einer Klasse auf eine andere zu übertragen, was die Wiederverwendbarkeit von Code erhöht.
+- Polymorphie ermöglicht es, dass Objekte unterschiedliche Formen annehmen und auf unterschiedliche Weise verwendet werden können, was die Flexibilität erhöht.
+-->
 
 ---
 transition: slide-up
 level: 1
 layout: image-left
 image: https://blog.klipse.tech/uml/chapter00/do-principles-mind-map.png
+hideInToc: true
 ---
 
 # DOP
@@ -120,6 +132,15 @@ image: https://blog.klipse.tech/uml/chapter00/do-principles-mind-map.png
 
 * validation at service boundary
 
+<!--
+- Anstatt Objekten modellieren wir Daten
+- Wir konsumieren meist von außen
+- Wir haben meist keine oder wenige interne Grenzen
+- Validierung nehmen wir an den Servicegrenzen vor
+
+- möglichen in allen OOP und FP Sprachen
+- Daten sind first class citizen
+-->
 
 ---
 title: Principles of DOP
@@ -130,13 +151,13 @@ transition: slide-up
 # Sharvit Principles
 |   |
 | ------ |
-| 1. Seperate data from logic |
+| <div v-mark.underline.orange="[1,2]"> 1. Seperate data from logic </div> |
 | |
-| 2. Data is stored in generic data structures |
+| <div v-mark.underline.orange="[2,3]"> 2. Data is stored in generic data structures </div> |
 | |
-| 3. Data is immutable |
+| <div v-mark.underline.orange="[3,4]"> 3. Data is immutable </div> |
 | |
-| 4. Seperate Schema from Data |
+| <div v-mark.underline.orange="[4,5]"> 4. Seperate Schema from Data </div> |
 
 ::right::
 
@@ -144,13 +165,17 @@ transition: slide-up
 
 |    |
 | ------ |
-| 1. Model the data, the whole data, and nothing but the data |
+| <div v-mark.underline.orange="[1,2]"> 1. Model the data, the whole data, and nothing but the data </div>|
 | |
-| 2. Make illegal states unrepresentable |
+| <div v-mark.underline.orange="[2,3]"> 2. Make illegal states unrepresentable </div> |
 | |
-| 3. Data is immutable |
+| <div v-mark.underline.orange="[3,4]"> 3. Data is immutable </div> |
 | |
-| 4. Validate at the boundary |
+| <div v-mark.underline.orange="[4,5]"> 4. Validate at the boundary </div> |
+
+<div class="mt-16">
+<a href="https://www.infoq.com/articles/data-oriented-programming-java/">Goetz Article</a>
+</div>
 
 <style>
 table, td, th, tr {
@@ -161,11 +186,31 @@ tbody tr:first-of-type td{
 }
 </style>
 
+<!--
+Principle 1:
++ code reusability, tested in isolation,  reduces complexity
+- more entities in system, what code can access what data?
+
+Principle 2:
++ generic functions and flexibility
+- no compile time check or schema, explicit type casting
+
+Principle 3:
++ concurrency and data access with confidence, predictable behaviour, fast equality
+- performance, verbose change of data
+
+Principle 4:
++ what do we validate, what do we even need?
+- performance hit?
+-->
+
+
 ---
 layout: default
 ---
 
 # Project AMBER and JEPs
+Incubator Project like Loom, Valhalla
 
 * Switch Expressions
 * Records
@@ -174,6 +219,23 @@ layout: default
 
 
 ![java_timeline](/images/java_timeline.png)
+
+<!--
+Features in PROJECT AMBER 
+- for developer expierence
+- used singularly or combined
+
+
+YOU ARE HERE!
+
+Wer arbeitet mit was?
+
+Java 8 und älter?
+Java 11 und älter?
+Java 17 und älter?
+Java 21?
+Java 22?
+-->
 
 ---
 level: 2
@@ -189,6 +251,7 @@ level: 2
 
 
 ````md magic-move
+
 ```java
 var memeOfTheDay = "";
 switch (day) {
@@ -212,10 +275,23 @@ var mOTD = switch (day) {
 ```
 ````
 
+<!--
+- can now be used as expression
+- right of arrow can be:
+  - expression
+  - block (here you can yield)
+  - throw (for convenience)
+
+- exhaustiveness as always
+- fall-through
+- better scoping
+-->
+
 ---
 layout: default
 level: 2
 ---
+
 <Titles>
   <div class="flex w-full flex-row justify-between items-center">
     <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">14</h4></div>
@@ -231,15 +307,32 @@ level: 2
   <img class="w-80 h-80" src="/images/record.png"/>
 </div>
 
+<!--
+Goals: 
+- simple aggregation of values
+- focus on modeling immutable data rather than extensible behavior.
+- automatically implement data-driven methods
+- Preserve nominal typing and migration compatibility.
+
+Rules:
+- cannot extend explicitly (implicitly extends java.lang.Record)
+- implicitly final and cannot be abstract
+- no real instance fields (header only)
+- no native keyword
+- record components and annotations on them
+-->
+
 ---
 layout: full
 level: 2
 ---
 
 ````md magic-move
+
 ```java
 record PokeDexEntry(int dexNo, String name) {}
 ```
+
 ```java
 class PokeDexEntry {
   private final int dexNo;
@@ -270,6 +363,12 @@ class PokeDexEntry {
 ```
 ````
 
+<style>
+.slidev-layout {
+  padding-top: 1rem
+}
+</style>
+
 ---
 layout: default
 level: 2
@@ -284,66 +383,75 @@ level: 2
 </Titles>
 
 
+<div class="flex flex-row w-full">
+
+<div class="flex w-2/3" id="magic-move-container">
 
 ````md magic-move
 
 ```java
 interface Status {}
 
+
 // non-volatile statuses need to be healed
-interface NonVolatileStatus extends Status {}
+interface NonVolatileStatus 
+    extends Status {}
 
-record Burn(float dmgPercentage, boolean appliedAfterEnemyFaint) implements NonVolatileStatus {}
-
-
-// volatile statuses subside after a random amount of turns
+// volatile statuses subside after X turns
 interface VolatileStatus extends Status {
+
   int turns();
 }
 
-interface PreventionStatus extends VolatileStatus {}
+interface PreventionStatus 
+    extends VolatileStatus {}
 
-record Confusion(float chance, int turns) implements PreventionStatus {}
+record Confusion(float chance, int turns) 
+    implements PreventionStatus {}
 ...
 ```
 
 ```java
-sealed interface Status permits NonVolatileStatus, VolatileStatus {}
+sealed interface Status 
+    permits NonVolatileStatus, VolatileStatus {}
 
 // non-volatile statuses need to be healed
-sealed interface NonVolatileStatus extends Status permits Burn {}
+sealed interface NonVolatileStatus 
+    extends Status {}
 
-record Burn(float dmgPercentage, boolean appliedAfterEnemyFaint) implements NonVolatileStatus {}
-
-
-// volatile statuses subside after a random amount of turns
-sealed interface VolatileStatus extends Status permits PreventionStatus {
+// volatile statuses subside after X turns
+sealed interface VolatileStatus extends Status 
+    permits PreventionStatus {
   int turns();
 }
 
-sealed interface PreventionStatus extends VolatileStatus permits Confusion {}
+sealed interface PreventionStatus 
+    extends VolatileStatus permits Confusion {}
 
-record Confusion(float chance, int turns) implements PreventionStatus {}
+record Confusion(float chance, int turns) 
+    implements PreventionStatus {}
 ...
 ```
 
 ```java
-sealed interface Status permits NonVolatileStatus, VolatileStatus {}
+sealed interface Status 
+    permits NonVolatileStatus, VolatileStatus {}
 
 // non-volatile statuses need to be healed
-sealed interface NonVolatileStatus extends Status {
+sealed interface NonVolatileStatus 
+    extends Status {}
 
- record Burn(float dmgPercentage, boolean appliedAfterEnemyFaint) implements NonVolatileStatus {}
-}
-
-// volatile statuses subside after a random amount of turns
-sealed interface VolatileStatus extends Status permits PreventionStatus {
+// volatile statuses subside after X turns
+sealed interface VolatileStatus extends Status 
+    permits PreventionStatus {
   int turns();
 }
 
-interface PreventionStatus extends VolatileStatus {
+interface PreventionStatus 
+    extends VolatileStatus {
 
-  record Confusion(float chance, int turns) implements PreventionStatus {}
+  record Confusion(float chance, int turns) 
+      implements PreventionStatus {}
 }
 
 
@@ -351,29 +459,66 @@ interface PreventionStatus extends VolatileStatus {
 
 
 ```java
-sealed interface Status permits NonVolatileStatus, VolatileStatus {}
+sealed interface Status 
+    permits NonVolatileStatus, VolatileStatus {}
 
 // non-volatile statuses need to be healed
-sealed interface NonVolatileStatus extends Status {
+sealed interface NonVolatileStatus 
+    extends Status {}
 
-  record Burn(float dmgPercentage, boolean appliedAfterEnemyFaint) implements NonVolatileStatus {}
-}
-
-// volatile statuses subside after a random amount of turns
-sealed interface VolatileStatus extends Status permits PreventionStatus {
+// volatile statuses subside after X turns
+sealed interface VolatileStatus extends Status
+    permits PreventionStatus {
   int turns();
 }
 
-non-sealed interface PreventionStatus extends VolatileStatus {}
+non-sealed interface PreventionStatus 
+    extends VolatileStatus {}
 
-record Confusion(float chance, int turns) implements PreventionStatus {}
+record Confusion(float chance, int turns) 
+    implements PreventionStatus {}
 ...
 ```
 
 ````
 
-<!--
+</div>
 
+<div class="flex w-1/3">
+
+```mermaid
+
+classDiagram
+class Status {
+  <<interface>>
+}
+
+class NonVolatileStatus {
+  <<interface>>
+}
+
+class VolatileStatus {
+  <<interface>>
+  + turns() int
+}
+
+class Confusion {
+  + turns() int
+  + chance() float
+}
+
+
+Status <|-- NonVolatileStatus
+Status <|-- VolatileStatus 
+VolatileStatus <|.. Confusion
+
+```
+
+
+</div>
+</div>
+
+<!--
 main motivation: widely accessible but not widely extensible.
 
 Constraints:
@@ -382,7 +527,20 @@ Every permitted subclass must explicitly extend the sealed class.
 Every permitted subclass must define a modifier: final, sealed, or non-sealed.
 
 * with (final) records we have **algebraic data types!**
+
+* records being the product type and sealed interfaces being the sum types
+
+* Status = SumType /Choice Type
+* Status Types = Unit Types
+* Confusion = Product Type
 -->
+
+<style>
+#magic-move-container div {
+  width: 100%;
+  margin-right: 1rem !important;
+}
+</style>
 
 ---
 layout: default
@@ -426,6 +584,8 @@ if (obj instanceof Status s) {
   if (a instanceof Status s) {
     ...// s is in scope
   }
+
+
   // s not in scope here
   if (b instanceof Status s) {
     ...
@@ -436,13 +596,13 @@ if (obj instanceof Status s) {
   <div v-click class="w-1/2">
 
   ```java
-  if (obj instanceof Confusion c && c.turns() > 1) {
-    // works
+  if (obj instanceof Confusion c 
+        && c.turns() > 1) {
+    // worßks
   }
-  ```
 
-  ```java
-  if (obj instanceof Confusion c || c.turns() > 1) {
+  if (obj instanceof Confusion c
+        || c.turns() > 1) {
     // doesn't work :(
   }
   ```
@@ -455,6 +615,10 @@ div.slidev-code-wrapper.slidev-code-magic-move.relative {
   margin-top: 2rem !important;
 }
 </style>
+
+<!--
+A pattern is a combination of (1) a predicate, or test, that can be applied to a target, and (2) a set of local variables, known as pattern variables, that are extracted from the target only if the predicate successfully applies to it.
+-->
 
 ---
 layout: default
@@ -500,6 +664,12 @@ if (obj instanceof Confusion(int turns, float chance)) {
 ```
 
 ````
+
+<!--
+- Extend pattern matching to destructure instances of record classes, enabling more sophisticated data queries.
+
+- Add nested patterns, enabling more composable data queries.
+-->
 
 ---
 layout: default
@@ -606,6 +776,13 @@ div.w-1\/2.flex.flex-auto div {
 }
 </style>
 
+<!--
+- Expand the expressiveness and applicability of switch expressions and statements by allowing patterns to appear in case labels.
+- Increase the safety of switch statements by requiring that pattern switch statements cover all possible input values.
+
+- Allow the historical null-hostility of switch to be relaxed when desired.
+-->
+
 ---
 layout: default
 level: 2
@@ -677,6 +854,13 @@ switch (box) {
 ````
 
 </div>
+
+<!--
+- clarify programs and reduce opportunities for error.
+- Improve the maintainability of all code by identifying variables that must be declared (e.g., in catch clauses) but are not used.
+- Allow multiple patterns to appear in a single case label, provided that none of them declare any pattern variables.
+- Improve the readability of record patterns by eliding unnecessary nested type patterns.
+-->
 
 ---
 level: 2
@@ -777,13 +961,13 @@ switch (b) {
 
 </div>
 
-
 <!--
-Pattern matching for switch does not support primitive type patterns
-Record patterns have limited support for primitive types
-Pattern matching for instanceof does not support primitive types
-Primitive types in instanceof and switch
+- Pattern matching for switch does not support primitive type patterns
+- Record patterns have limited support for primitive types
+- Pattern matching for instanceof does not support primitive types
+- Primitive types in instanceof and switch
 -->
+
 ---
 layout: image-right
 image: /images/nurse_joy.png
@@ -798,6 +982,7 @@ transition: slide-up
 
 ---
 layout: default
+title: How do others do it?
 ---
 
 # How do others do it? - Kotlin
@@ -807,7 +992,7 @@ layout: default
 
 * record-"like" data classes
 * sealed classes and interfaces (Kotlin 1.5)
-* `when` pattern matching is limited (KT-4608, KT-13626)
+* `when` pattern matching is limited ([KT-4608](https://youtrack.jetbrains.com/issue/KT-4608/Support-recursive-nested-destructuring), [KT-13626](https://youtrack.jetbrains.com/issue/KT-13626))
 
 </div>
 
@@ -823,14 +1008,12 @@ layout: default
 sealed interface Pokemon {
   data class KantoPokemon(val nickName: String) : Pokemon
   data class JohtoPokemon(val nickName: String) : Pokemon
-  data class SinnohPokemon(val nickName: String) : Pokemon
 }
 
 // healingService
 fun healPokemon(pokemon: Pokemon) = when (pokemon) {
   is KantoPokemon -> healKantoPokemon(pokemon)
   is JohtoPokemon -> healJohtoPokemon(pokemon)
-  is SinnohPokemon
 }
 
 ```
@@ -841,6 +1024,7 @@ fun healPokemon(pokemon: Pokemon) = when (pokemon) {
 ---
 layout: default
 transition: slide-up
+hideInToc: true
 ---
 
 # How do others do it? - Rust
@@ -860,15 +1044,13 @@ transition: slide-up
 </div>
 </div>
 
-<div class="flex flex-1 flex-row w-full gap-2 mt-6">
+<div class="flex flex-1 flex-row w-full gap-2 mt-4">
 <div v-click class="w-1/2">
 
 ```rust
-pub enum Option<T> { // Sealed class with records :O
-  /// No value.
-  None,
-  /// Some value of type `T`.
-  Some(T),
+pub enum Option<T> {
+  None, /// No value.
+  Some(T),// Some value of type `T`.
 }
 ```
 
@@ -878,10 +1060,8 @@ pub enum Option<T> { // Sealed class with records :O
 
 ```rust
 pub enum Result<T, E> {
-  /// Contains the success value
-  Ok(T),
-  /// Contains the error value
-  Err(E),
+  Ok(T), // success value
+  Err(E),// error value
 }
 ```
 
@@ -895,9 +1075,8 @@ pub enum Result<T, E> {
 
 ```rust
 let option = Some("Value");
-
 match option { //extensive pattern matching
-  Some(val) => println!("We have a {}", val),
+  Some(val) => println!("Found {}", val),
   None => println!("We have no value")
 };
 ```
@@ -908,7 +1087,6 @@ match option { //extensive pattern matching
 
 ```rust
 let result = Err("OW it did not worky")
-
 if let Err(error_msg) = result {
   println!("Error occured: {}", error_msg);
 }
