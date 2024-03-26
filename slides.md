@@ -146,6 +146,7 @@ hideInToc: true
 title: Principles of DOP
 layout: two-cols
 transition: slide-up
+clicks: 4
 ---
 
 # Sharvit Principles
