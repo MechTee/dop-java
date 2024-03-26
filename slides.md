@@ -86,11 +86,11 @@ title: OOP v DOP
 
 # OOP
 
-* complex entites and systems
+* complex entities and systems
 
 <br>
 
-* modelling business entites and processes
+* modelling business entities and processes
 
 <br>
 
@@ -122,23 +122,23 @@ hideInToc: true
 
 <br>
 
-* consume from outside world
+* consume data from outside world
+
+<br>
+
+* validate data at service boundary
 
 <br>
 
 * less/no internal boundaries
 
-<br>
-
-* validation at service boundary
-
 <!--
 - Anstatt Objekten modellieren wir Daten
 - Wir konsumieren meist von außen
-- Wir haben meist keine oder wenige interne Grenzen
 - Validierung nehmen wir an den Servicegrenzen vor
+- Wir haben meist keine oder wenige interne Grenzen
 
-- möglichen in allen OOP und FP Sprachen
+- möglich in allen OOP und FP Sprachen
 - Daten sind first class citizen
 -->
 
@@ -814,7 +814,7 @@ static int countStatuses(Iterable<Status> statuses) {
 static int countStatuses(Iterable<Status> statuses) {
   int total = 0;
   for (Status _ : statuses)
-    total++
+    total++;
   return total;
 }
 ```
