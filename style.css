@@ -1,0 +1,8 @@
+pre {
+    font-size: 2rem !important;
+}
+
+:root {
+    --slidev-code-font-size: 16px;
+    --slidev-code-line-height: 20px;
+}
