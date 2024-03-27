@@ -175,7 +175,8 @@ clicks: 4
 | <div v-mark.underline.orange="[4,5]"> 4. Validate at the boundary </div> |
 
 <div class="mt-16 ml-16">
-<a href="https://www.infoq.com/articles/data-oriented-programming-java/" target="_blank">Goetz Article</a>
+<a href="https://www.infoq.com/articles/data-oriented-programming-java/" target="_blank">
+  INFOQ - Data-oriented Programming in Java</a>
 </div>
 
 <style>
