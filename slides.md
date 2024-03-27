@@ -174,8 +174,8 @@ clicks: 4
 | |
 | <div v-mark.underline.orange="[4,5]"> 4. Validate at the boundary </div> |
 
-<div class="mt-16">
-<a href="https://www.infoq.com/articles/data-oriented-programming-java/">Goetz Article</a>
+<div class="mt-16 ml-16">
+<a href="https://www.infoq.com/articles/data-oriented-programming-java/" target="_blank">Goetz Article</a>
 </div>
 
 <style>
@@ -599,7 +599,7 @@ if (obj instanceof Status s) {
   ```java
   if (obj instanceof Confusion c 
         && c.turns() > 1) {
-    // worßks
+    // works
   }
 
   if (obj instanceof Confusion c
