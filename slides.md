@@ -258,18 +258,18 @@ level: 2
 var memeOfTheDay = "";
 switch (day) {
   case WEDNESDAY:
-    mOTD = "ITS WEDNESDAY MY DUDES";
+    memeOfTheDay = "ITS WEDNESDAY MY DUDES";
     break;
   case FRIDAY:
-    mOTD = "IT'S FRIDAY, FRIDAY!";
+    memeOfTheDay = "IT'S FRIDAY, FRIDAY!";
     break;
   default:
-    mOTD = "None found."
+    memeOfTheDay = "None found."
 }
 ```
 
 ```java
-var mOTD = switch (day) {
+var memeOfTheDay = switch (day) {
   case WEDNESDAY  -> "ITS WEDNESDAY MY DUDES";
   case FRIDAY     -> "IT'S FRIDAY, FRIDAY!";
   default         -> "None found."
@@ -336,7 +336,7 @@ record PokeDexEntry(int dexNo, String name) {}
 ```
 
 ```java
-class PokeDexEntry {
+final class PokeDexEntry {
   private final int dexNo;
   private final String name;
 
@@ -1152,3 +1152,42 @@ hideInToc: true
 <div class="flex justify-center">
   <img class="h-48" src="/images/qr-code_slides_400_400.png"/>
 </div>
+
+---
+layout: default
+hideInToc: true
+---
+
+<Titles>
+  <div class="flex w-full flex-row justify-between items-center">
+    <div class="bg-orange-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">??</h4></div>
+    <h1 class="flex align-center justify-center items-center">Derived Record Creation JEP 468
+</h1>
+    <div class="bg-green-500 shadow h-10 w-10 text-center justify-center items-center flex mb-4"><h4 class="text-white">??</h4></div>
+  </div>
+</Titles>
+
+
+````md magic-move
+
+```java
+Point newLoc = new Point(oldLoc.x() * 2, oldLoc.y(), oldLoc.z());
+
+or
+
+record Point(int x, int y, int z) {
+    Point withX(int newX) { return new Point(newX, y, z); }
+    Point withY(int newY) { return new Point(x, newY, z); }
+    Point withZ(int newZ) { return new Point(x, y, newZ); }
+}
+
+```
+
+```java
+Point nextLoc = oldLoc with {
+    x *= 2;
+    y *= 2;
+    z *= 2;
+};
+```
+````
