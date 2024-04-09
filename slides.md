@@ -449,7 +449,7 @@ sealed interface VolatileStatus extends Status
   int turns();
 }
 
-interface PreventionStatus 
+sealed interface PreventionStatus 
     extends VolatileStatus {
 
   record Confusion(float chance, int turns) 
